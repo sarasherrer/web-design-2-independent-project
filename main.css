@@ -1,0 +1,368 @@
+html {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  @-moz-viewport { width: device-width; scale: 1; }
+  @-ms-viewport { width: device-width; scale: 1; }
+  @-o-viewport { width: device-width; scale: 1; }
+  @-webkit-viewport { width: device-width; scale: 1; }
+  @viewport { width: device-width; scale: 1; }
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  -webkit-perspective: 1px;
+  perspective: 1px;
+
+
+}
+
+
+main {
+  padding-left: 15rem;
+  padding-right: 15rem;
+}
+ul {
+  padding: 0;
+}
+
+
+
+.parallax-group {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+}
+
+.back {
+  -webkit-transform: translateZ(-1px) scale(3);
+  transform: translateZ(-1px) scale(3);
+  position: relative;
+  top: -1vh;
+}
+
+.front {
+  background-image: url(../images/background.jpg);
+  padding: 2.5em 2.5em 5em;;
+  position: relative;
+  z-index: 2;
+}
+
+.banner {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  text-align: center;
+  background-color: white;
+
+  padding-top: 1em;
+}
+
+h1 {
+  margin-bottom: 0;
+  }
+
+p {
+  margin-top: 0;
+}
+
+nav {
+  position: absolute;
+  z-index: 3;
+  background-color: #ffffff;
+  width: 100%;
+}
+
+.nav {
+  display: none;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.nav-check {
+  position: absolute;
+  top: -3em;
+}
+.nav-check:checked ~ .nav {
+  display: block;
+}
+
+.nav-label {
+  cursor: pointer;
+  font-size: 1.25rem;
+  width: 40px;
+  display: inline-block;
+}
+
+.nav-check:checked  .nav-label {
+  background-color: blue;
+}
+
+.nav-open,
+.nav-closed {
+  display: block;
+  width: 100%;
+}
+
+.nav-label {
+  position: absolute;
+  z-index: 3;
+  right: 3px;
+  top: 10px;
+}
+
+.nav-close {
+  display: none;
+}
+
+.nav-check:checked ~ .nav-label .nav-open {
+  display: none;
+}
+
+.nav-check:checked ~ .nav-label .nav-close {
+  display: block;
+}
+.sizing {
+  margin-top: 300px;
+}
+
+.style {
+  background: white;
+  width: 50%;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+
+}
+
+li {
+  padding: 1.5rem;
+  background-color: ;
+  border-bottom: 3px solid black;
+  font-size: 1em;
+  width: 100%;
+  list-style-type: none;
+  text-align: center;
+}
+
+li:hover {
+  background-color: grey;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+
+  }
+
+.btn {
+  padding: 1rem;
+  text-align: center;
+  background-color: rgb(43,82,68);
+  border-radius: 3px;
+
+  }
+
+.center {
+  text-align: center;
+  padding-top: 1em;
+}
+
+
+
+.grid-large {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 1rem;
+  column-gap: 1rem;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about {
+  width: 100%;
+}
+
+.section {
+  width: 100%;
+
+}
+
+.section p {
+  margin-top: 10px;
+}
+
+.section h2 {
+  margin-top: 2em;
+}
+
+.text-block {
+   gap: 1rem;
+}
+h2 {
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.section {
+  padding-left: .5em;
+  padding-right: .5em;
+}
+
+.icon {
+  max-width: 50px;
+  place-self: center;
+}
+
+.grid-foot {
+  display: grid;
+  grid-template-areas:
+  "instagram mail";
+  margin: 20px 10px 20px 10px;
+}
+
+.mail {
+  grid-area: mail;
+}
+.instagram {
+  grid-area: instagram;
+}
+
+.logo {
+  top: 10px;
+  left: 5px;
+}
+
+.logo-sized {
+  width: 50px;
+  z-index: 3;
+  position: absolute;
+  margin: 10px 20px 20px 20px;
+}
+
+.button {
+  text-decoration: none;
+}
+
+
+.popup {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0,0,0,0.6);
+  display: none;
+  padding: 90px;
+
+}
+
+
+#img-popup-gd-main .popup-content {
+  position: relative;
+  border: 5px solid #fff;
+}
+.close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: #222;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  line-height: 0;
+  padding: 9px 0 11px;
+  width: 25px;
+  text-align: center;
+}
+
+.popup:target {
+  display: block;
+}
+
+.popup:target > body {
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+
+.relative:hover > .absolute {
+  display: block;
+}
+
+.relative:hover {
+opacity: 50%;
+}
+
+.absolute {
+  font-size: 2rem;
+}
+
+
+
+@media only screen and (min-width: 34em) {
+
+  .logo-sized {
+    width: 100px;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 5em;
+
+  }
+
+  .style {
+    width: 100%;
+    position: absolute;
+  }
+
+  .nav-label {
+    display: none;
+  }
+
+  .section {
+    width: 50%;
+  }
+
+  .grid-large {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .banner {
+    top: 4em;
+    padding: 0;
+  }
+
+}
