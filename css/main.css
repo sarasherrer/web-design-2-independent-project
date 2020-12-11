@@ -20,6 +20,7 @@ body {
   -webkit-overflow-scrolling: touch;
   -webkit-perspective: 1px;
   perspective: 1px;
+  font-family: 'Nunito', sans-serif;
 }
 
 .skip-links {
@@ -69,13 +70,21 @@ ul {
 
 }
 
+.cropped {
+  height: 30em;
+  overflow: hidden;
+}
+
+.cropped img {
+  margin-top: -5em;
+}
+
 .banner {
   position: absolute;
   top: 0;
   width: 100%;
   text-align: center;
   background-color: white;
-
   padding-top: 1em;
 }
 
@@ -166,6 +175,7 @@ nav a {
   width: 100%;
   display: block;
 }
+
 .btn {
   padding: 1rem;
   text-align: center;
@@ -193,6 +203,9 @@ nav a {
 
 .about {
   width: 100%;
+  margin-top: 1rem;
+  padding-left: 4rem;
+  padding-right: 4em;
 }
 
 .section {
@@ -337,7 +350,6 @@ img {
 
   .style {
     width: 100%;
-
   }
 
   .nav-label {
@@ -362,3 +374,13 @@ img {
   }
 
 }
+
+@media only screen and (min-width: 50em) {
+  .cropped img {
+    margin-top: -17em;
+  }
+
+  @media only screen and (min-width: 60em) {
+    .cropped img {
+      margin-top: -30em;
+    }
