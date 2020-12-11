@@ -9,37 +9,33 @@
   <link href="css/main.css" rel="stylesheet">
 </head>
 <body>
-
   <ul class="skip-links">
     <li><a href="#nav">Skip to navigation</a></li>
     <li><a href="#main">Skip to main content</a></li>
     <li><a href="#contentinfo">Skip to footer</a></li>
   </ul>
   <header role="banner">
-    <nav role="navigation" class="style">
-      <label class="nav-label" for="nav-check">
-        <input type="checkbox" class="nav-check" id="nav-check">
-        <img class="nav-open" src="images/hamburger-01.svg" alt="">
-        <img class="nav-close" src="images/close.svg" alt="">
-      </label>
-      <ul class="nav" id="nav">
-        <li><a href="#">About</a></li>
-        <li><a href="#">Graphic Design</a></li>
-        <li><a href="#">Traditional Art</a></li>
-      </ul>
+    <nav role="navigation" class="style" id="nav" tabindex="0">
+      <div class="grid-header">
+        <div class="title">
+          <h1>Sara Sherrer</h1>
+          <p>Here's my online portfolio!</p>
+        </div>
+        <ul class="nav">
+          <li><a class="btn" href="index.html">About</a></li>
+          <li><a class="btn" href="graphic-design.html">Graphic Design</a></li>
+          <li><a class="btn" href="traditional-design.html">Traditional Art</a></li>
+        </ul>
+      </div>
     </nav>
     <div class="logo">
       <img class="logo logo-sized" src="images/image.svg" alt="logo">
     </div>
     <div>
       <img src="images/sokka-and-ang-2.jpg" alt="">
-      <div class="banner">
-        <h1>Sara Sherrer</h1>
-        <p>Here's my online portfolio!</p>
-      </div>
     </div>
   </header>
-  <main role="main" id="main">
+  <main role="main" id="main" tabindex="0">
     <section class="front">
       <div class="flex">
         <div class="about">
@@ -87,12 +83,14 @@
       </div>
     </section>
   </main>
-  <footer role="contentinfo" class="grid-foot">
-    <div class="icon mail">
-      <img src="images/mail.svg" alt="email">
-    </div>
-    <div class="icon instagram">
-      <a href="https://www.instagram.com/sara.sherrer/"><img src="images/instagram.svg" alt="instagram"></a>
+  <footer role="contentinfo" id="contentinfo" tabindex="0">
+    <div class="grid-foot">
+      <div class="icon mail">
+        <img src="images/mail.svg" alt="email">
+      </div>
+      <div class="icon instagram">
+        <a href="https://www.instagram.com/sara.sherrer/"><img src="images/instagram.svg" alt="instagram"></a>
+      </div>
     </div>
   </footer>
 </body>
